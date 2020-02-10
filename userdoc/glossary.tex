@@ -1,0 +1,119 @@
+% Load after hyperref
+\usepackage[acronym,toc,acronymlists={acronym,notation},hyperfirst=false]{glossaries}
+\usepackage{glossaries-extra}
+
+% Expand on first use
+% \setabbreviationstyle[acronym]{long-short}
+% \setabbreviationstyle{short-long}
+
+% Use three glossaries:
+% Terms (default)
+% Acronyms (added by the 'acronym' option)
+% Notation (created manually here)
+\newglossary[nlg]{notation}{not}{ntn}{Notation}
+
+\makeglossaries
+
+% Normal glossary entries
+\newglossaryentry{gather}
+{
+name={gather},
+description={A collection of traces sorted (or gathered) according to some
+criteria such as ``shot gather'' or ``RP'' gather.  SIOSEIS frequently refers
+to ``a gather'' meaning rp sorted, whereas a ``shot'' means a shot sorted.}
+}
+ 
+\newglossaryentry{shot}
+{
+    name={shot},
+    description={The collection of traces associated with the field shot.  SEG-Y
+trace header word 4 (shot record number) is used for the ``shot number''.  SEG-Y
+word 7 (rp trace number) must be 0 to be considered shot sorted.}
+}
+
+\newglossaryentry{FNO_LNO_List}
+{
+name={FNO-LNO list},
+description={}
+}
+
+\newglossaryentry{preset}
+{
+    name={preset},
+    description={A parameter value which stays the same from FNO/LNO list to
+    list until specified or given again.}
+}
+
+\newglossaryentry{default}
+{
+    name={default},
+    description={A parameter value which reverts back to its original value
+    after every FNO-LNO list.}
+}
+
+% Abbreviations
+\newacronym{ascii}{ASCII}{American Standard Code for Information Interchange}%, a text encoding format standardized in 1966. Constrasted with EBCDIC
+\newacronym{ebcdic}{EBCDIC}{Extended Binary Coded Decimal Interchange Code}%, a text encoding format typically used on IBM mainframe systems instead of ASCII}
+\newacronym{nmea}{NMEA}{National Marine Electronics Association}
+\newacronym{usgs}{USGS}{United States Geological Survey}
+
+% Acronyms
+\newabbreviation{cdp}{CDP}{common depth point}
+\newabbreviation{cmp}{CMP}{common mid point}
+\newabbreviation{cwp}{CWP}{Colorado School of Mines Center for Wave Phenomena}
+\newabbreviation{dfls}{DFLS}{distance from the last shot}
+\newabbreviation{esp}{ESP}{expanding spread profiles}
+\newabbreviation{fno}{FNO}{first number}%, referring to a shot or RP depending on how the data are sorted}
+\newabbreviation{fft}{FFT}{fast Fourier transform}
+\newabbreviation{gmt}{GMT}{Greenwich Mean Time}
+\newabbreviation{gps}{GPS}{Global Positioning System}
+\newabbreviation{gpr}{GPR}{ground penetrating radar}
+\newabbreviation{ldeo}{LDEO}{Lamont-Doherty Earth Observatory}
+\newabbreviation{lno}{LNO}{last number}%, referring to a shot or RP depending on how the data are sorted}
+\newabbreviation{ltz}{LTZ}{local trace zeroing}
+\newabbreviation{nan}{NaN}{IEEE floating-point exception value `not-a-number'}
+%\newabbreviation{nmea}{NMEA}{National Marine Electronics Association}
+\newabbreviation{nsf}{NSF}{National Science Foundation}
+\newabbreviation{obs}{OBS}{ocean bottom seismometers}
+\newabbreviation{rp}{RP}{reflection point}
+\newabbreviation{rms}{RMS}{root mean square}
+\newabbreviation{seg}{SEG}{Society of Exploration Geophysicists}
+\newabbreviation{sio}{SIO}{Scripps Institution of Oceanography}
+\newabbreviation{ukooa}{UKOOA}{United Kingdom Offshore Operators Association}
+\newabbreviation{wap}{WAP}{wide angle profiles}
+% Symbols (Greek letters and such)
+
+\newglossaryentry{not:p}{% This entry goes in the `notation' glossary:
+  name={\ensuremath{p}},
+  description={p},
+  type=notation,
+  sort={p}
+}
+
+\newglossaryentry{not:delta}{% This entry goes in the `notation' glossary:
+  name={\ensuremath{\delta}},
+  description={Delta},
+  type=notation,
+  sort={delta}
+}
+
+\newglossaryentry{not:tau}{% This entry goes in the `notation' glossary:
+  name={\ensuremath{\tau}},
+  description={Tau},
+  type=notation,
+  sort={tau}
+}
+
+\newglossaryentry{not:t0}{% This entry goes in the `notation' glossary:
+  name={\ensuremath{t_{0}}},
+  description={the normal incidence two way travel time},
+  type=notation,
+  sort={t0}
+}
+
+\newglossaryentry{not:x}{% This entry goes in the `notation' glossary:
+  name={\ensuremath{x}},
+  description={the shot to receiver distance of the trace; see Section~\ref{cmd_geom}},
+  type=notation,
+  sort={x}
+}

@@ -53,7 +53,7 @@ else()
     docs # ALL
     COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE_OUT}
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-    COMMENT "Generating API documentation PDF with Doxygen" VERBATIM
+    COMMENT "Generating API documentation with Doxygen" VERBATIM
     BYPRODUCTS ${CMAKE_CURRENT_BINARY_DIR}/doc
                ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile
                ${CMAKE_CURRENT_BINARY_DIR}/DoxygenLayout.xml

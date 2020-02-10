@@ -2,6 +2,13 @@
 %--- End generated contents ---
 % \end{appendices}
 
+% Glossaries
+\newpage
+\phantomsection
+\clearemptydoublepage
+% \printglossary[title=Notation,type=symbols,style=list,nogroupskip]
+\printglossaries
+
 % References
 \newpage
 \phantomsection

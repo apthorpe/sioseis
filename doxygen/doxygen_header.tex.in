@@ -23,10 +23,14 @@
 %z \usepackage[title,titletoc]{appendix}
 \usepackage[titletoc]{appendix}
 %z \usepackage{biblatex}
-\usepackage{fixltx2e}
+% \usepackage{fixltx2e}
+\usepackage[english]{babel}
 \usepackage{booktabs} %VENDOR
 %z \usepackage{cancel}
 \usepackage{color} %VENDOR
+\usepackage{commath}
+\usepackage[utf8]{inputenc}
+\usepackage[autostyle]{csquotes}
 \usepackage{geometry}
 \usepackage{calc}
 \usepackage{enumitem}
@@ -39,19 +43,21 @@
 \usepackage{graphicx}
 \usepackage{ifpdf}
 \usepackage{ifxetex}
-\usepackage[utf8]{inputenc}
 %SIMPLE \usepackage{lastpage}
+\usepackage{listings}
 %z \usepackage{longtable}
+\usepackage{makeidx}
+% \usepackage{markdown}
 \usepackage{mathtools} %VENDOR
 %z \usepackage[version=3]{mhchem}
-\usepackage{makeidx}
 \usepackage{multicol}
 \usepackage{multirow}
 \usepackage{newunicodechar}
 \PassOptionsToPackage{warn}{textcomp}
 % \usepackage[full]{textcomp}
-\usepackage[redefsymbols,decimalsymbol={.}]{siunitx} %VENDOR
+\usepackage{scrextend}
 \usepackage{setspace} %VENDOR
+\usepackage[redefsymbols,decimalsymbol={.}]{siunitx} %VENDOR
 \usepackage{tabularx} %VENDOR
 \usepackage[rm]{titlesec} %VENDOR
 % \usepackage{verbatim} %VENDOR
@@ -268,6 +274,37 @@
   urlcolor=NavyBlue,%
   unicode%
 }
+% Load after hyperref
+\usepackage{bookmark}
+
+% 1.f Set code listing style
+
+\lstset{%
+basicstyle=\footnotesize\ttfamily,%
+columns=fullflexible,%
+keepspaces=true,%
+breaklines=true,%
+language=[ANSI]C,%
+numbers=left,%
+numberstyle=\tiny,%
+numbersep=11pt%
+}
+
+% 1.g Set inline quotations to be italicized
+
+\DeclareQuoteStyle[american]{english}
+  {\itshape\textquotedblleft}
+  [\textquotedblleft]
+  {\textquotedblright}
+  [0.05em]
+  {\textquoteleft}
+  {\textquoteright}
+
+% 1.h Generate glossaries
+
+% Import glossary entries from external file
+  % This also invokes \usepackage{glossaries} and \makeglossaries
+\input{glossary}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 2. Set report metadata
@@ -499,8 +536,10 @@ A & February 5, 2020 & Initial draft \\
 
 \newpage
 
-% Manually-composed file containing requirements for design specification
-\include{overview}
+% Manually-composed file containing users guide
+\input{userguide}
+% Manually-composed file containing developer overview
+\input{overview}
 
 % % References
 % \newpage

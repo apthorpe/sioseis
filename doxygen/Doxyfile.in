@@ -1849,7 +1849,10 @@ LATEX_FOOTER           = @CMAKE_CURRENT_BINARY_DIR@/doxygen_footer.tex
 LATEX_EXTRA_FILES      = @CMAKE_CURRENT_SOURCE_DIR@/img/sioseis_title_foot.png \
                          @CMAKE_CURRENT_SOURCE_DIR@/img/sioseis_title_head.png \
                          @CMAKE_CURRENT_SOURCE_DIR@/userdoc/sioseis.bib \
-                         @CMAKE_CURRENT_SOURCE_DIR@/userdoc/overview.tex
+                         @CMAKE_CURRENT_SOURCE_DIR@/userdoc/glossary.tex \
+                         @CMAKE_CURRENT_SOURCE_DIR@/userdoc/userguide.tex \
+                         @CMAKE_CURRENT_SOURCE_DIR@/userdoc/overview.tex \
+                         @CMAKE_CURRENT_SOURCE_DIR@/LICENSE
 
 # If the PDF_HYPERLINKS tag is set to YES, the LaTeX that is generated is
 # prepared for conversion to PDF (using ps2pdf or pdflatex). The PDF file will
